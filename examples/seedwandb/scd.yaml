@@ -1,0 +1,27 @@
+# neuralcdm.yaml
+program: example_scd.py
+method: bayes
+metric:
+  goal: maximize
+  name: valid_metric
+parameters:
+  model_name:
+    values: ["scd"]
+  dataset:
+    values: ["xes"]
+  population_size:
+    values: [20, 100, 200]
+  ngen:
+    values: [5, 7, 10]
+  cxpb:
+    values: [0.1,0.5,0.9]
+  mutpb:
+    values: [0.1,0.5,0.9]
+  lr:
+    values: [1e-3, 1e-4, 1e-5]
+  batch_size:
+    values: [64, 256]
+  fold:
+    values: [0, 1, 2, 3, 4]
+  seed:
+    values: [42, 3407]

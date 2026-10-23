@@ -1,0 +1,31 @@
+# kancd.yaml
+program: example_kancd.py
+method: bayes
+metric:
+  goal: maximize
+  name: valid_metric
+parameters:
+  model_name:
+    values: ["kancd"]
+  dataset:
+    values: ["xes"]
+  hidden_dims1:
+    values: [128, 256, 512]
+  hidden_dims2:
+    values: [64, 128, 256]
+  dropout1:
+    values: [0.05, 0.1, 0.3, 0.5]
+  dropout2:
+    values: [0.05, 0.1, 0.3, 0.5]
+  emb_dim:
+    values: [10, 15, 20, 30]
+  mf_type:
+    values: ["mf", "gmf", "ncf1", "ncf2"]
+  lr:
+    values: [1e-3, 5e-4, 1e-4, 5e-5]
+  batch_size:
+    values: [64, 256]
+  fold:
+    values: [0, 1, 2, 3, 4]
+  seed:
+    values: [42, 3407]

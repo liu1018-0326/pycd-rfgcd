@@ -1,0 +1,29 @@
+# dina.yaml
+program: example_icdm.py
+method: bayes
+metric:
+  goal: maximize
+  name: valid_metric
+parameters:
+  model_name:
+    values: ["icdm"]
+  dataset:
+    values: ["xes"]
+  gcnlayers:
+    values: [2, 3]
+  dim:
+    values: [16, 32, 64]
+  dataset:
+    values: ["mean", "gcn", "pool", "lstm"]
+  khop:
+    values: [2, 3]
+  weight_reg:
+    values: [0.001, 0.01, 0.05]
+  lr:
+    values: [1e-3, 5e-4, 1e-4, 5e-5]
+  batch_size:
+    values: [64, 128, 32, 256, 512] 
+  fold:
+    values: [1,0]
+  seed:
+    values: [42, 3407]

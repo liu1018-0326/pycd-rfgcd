@@ -1,0 +1,37 @@
+# kancd.yaml
+program: example_disengcd.py
+method: bayes
+metric:
+  goal: maximize
+  name: valid_metric
+parameters:
+  model_name:
+    values: ["disengcd"]
+  dataset:
+    values: ["xes"]
+  n_hid:
+    values: [64,128, 256, 512]
+  dropout1:
+    values: [0.05, 0.1, 0.3, 0.5]
+  dropout2:
+    values: [0.05, 0.1, 0.3, 0.5]
+  ratio:
+    values: [0.5,0.6,0.7,0.8,0.9]
+  k:
+    values: [1,2]
+  lam_seq:
+    values: [0.7,0.8,0.9]
+  lam_res:
+    values: [0.7,0.8,0.9]
+  weight_decay:
+    values: [1e-5, 1e-4, 1e-3]
+  alr:
+    values: [1e-5, 1e-4, 1e-3,3e-4]
+  lr:
+    values: [1e-3, 5e-4, 1e-4, 5e-5]
+  batch_size:
+    values: [64,  256]
+  fold:
+    values: [0, 1, 2, 3, 4]
+  seed:
+    values: [42, 3407]

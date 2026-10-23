@@ -1,0 +1,23 @@
+# mirt.yaml
+program: example_mirt.py
+method: bayes
+metric:
+  goal: maximize
+  name: valid_metric
+parameters:
+  model_name:
+    values: ["mirt"]
+  dataset:
+    values: ["xes"]
+  latent_dim:
+    values: [5, 10, 15, 20, 25]
+  a_range:
+    values: [1.0, 2.0, 3.0, 5.0]
+  lr:
+    values: [1e-3, 5e-4, 1e-4, 5e-5]
+  batch_size:
+    values: [64, 128, 256]
+  fold:
+    values: [0, 1, 2, 3, 4]
+  seed:
+    values: [42, 3407]
